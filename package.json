@@ -20,14 +20,15 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "pretypeorm": "(rm ormconfig.json || :) && ts-node -r tsconfig-paths/register src/scripts/ormconfig.ts",
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
-    "typeorm:migration:generate": "npm run typeorm -- migration:generate ./src/migration/$npm_config_name -d ./src/config/data-source.ts",
-    "typeorm:migration:run": "npm run typeorm -- migration:run -d ./src/config/data-source.ts",
-    "typeorm:migration:revert": "npm run typeorm -- migration:revert -d ./src/config/data-source.ts"
+    "typeorm:generate": "npm run typeorm -- migration:generate ./src/migration/$npm_config_name -d ./src/config/data-source.ts",
+    "typeorm:run": "npm run typeorm -- migration:run -d ./src/config/data-source.ts",
+    "typeorm:revert": "npm run typeorm -- migration:revert -d ./src/config/data-source.ts"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
     "@nestjs/config": "^3.0.0",
     "@nestjs/core": "^9.0.0",
+    "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^9.0.0",
     "@nestjs/typeorm": "^10.0.0",
     "module-alias": "^2.2.3",

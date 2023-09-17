@@ -1,5 +1,5 @@
 import { DataSource } from 'typeorm';
 
-import { configService } from './config.service';
+import { configService } from '@app/config.service';
 
 export default new DataSource(configService.getDataSourceConfig());

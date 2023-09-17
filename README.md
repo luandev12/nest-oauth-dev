@@ -31,3 +31,7 @@ $ yarn run test:cov
 ```
 ## Run Database Docker with docker-compose and chmod folder database storage with command
 sudo chmod -R 777 nest_postgres_data nest_pgadmin_data
+
+## Migration Database
+npm run typeorm:generate --name=dev
+npm run typeorm:run

@@ -1,6 +1,6 @@
 import fs = require('fs');
 
-import { configService } from '../config/config.service';
+import { configService } from '@app/config.service';
 
 fs.writeFileSync(
   'ormconfig.json',
