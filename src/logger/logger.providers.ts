@@ -1,6 +1,6 @@
 import { prefixesForLoggers } from './logger.decorator';
 import { Provider } from '@nestjs/common';
-import { LoggerService } from './logger.service';
+import { LoggerService } from '@app/logger/logger.service';
 
 function loggerFactory(logger: LoggerService, prefix: string) {
   if (prefix) {

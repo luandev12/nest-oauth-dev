@@ -1,12 +1,13 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-
-import { LoggerModule } from './logger/logger.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { configService } from './config/config.service';
+
+import { AppController } from '@app/app.controller';
+import { AppService } from '@app/app.service';
+
+import { LoggerModule } from '@app/logger/logger.module';
+
+import { configService } from '@app/config/config.service';
 
 @Module({
   imports: [
